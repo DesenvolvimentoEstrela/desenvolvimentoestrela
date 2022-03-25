@@ -1,0 +1,1602 @@
+/* Blocks can be defined both on the store/blocks.json file, and in any number of json
+ * files inside the store/blocks directory, with any arbitrary directory structure.
+ *
+ * Additionally, all blocks files can support comments, such as this one, if given the
+ * .jsonc file extension.
+ *
+ * The store/blocks.json file is intended for backwards compatibility, for miscellaneous
+ * blocks, or if the app is simple enough that it doesn't warrant splitting the file.
+ */
+{
+  "store.orderplaced": {
+    "blocks": [
+      "order-placed"
+    ]
+  },
+  "store.account": {
+    "blocks": [
+      "my-account"
+    ],
+    "parent": {
+      "challenge": "challenge.profile"
+    }
+  },
+  "store.login": {
+    "blocks": [
+      "login-content#default"
+    ],
+    "props": {
+      "blockClass": "pg-login"
+    }
+  },
+  "login-content#default": {
+    "props": {
+      "blockClass": "pg-login",
+      "isInitialScreenOptionOnly": false,
+      "defaultOption": 1,
+      "showPasswordVerificationIntoTooltip": true
+    }
+  },
+  "store.product-review-form": {
+    "blocks": [
+      "product-review-form"
+    ]
+  },
+  "store.not-found#product": {
+    "blocks": [
+      "rich-text#not-found"
+    ]
+  },
+  "store.not-found#search": {
+    "blocks": [
+      "rich-text#not-found"
+    ]
+  },
+  "rich-text#not-found": {
+    "props": {
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "text": "**PÁGINA NÃO ENCONTRADA**",
+      "font": "t-heading-1"
+    }
+  },
+  "product-list": {
+    "blocks": [
+      "product-list-content-desktop",
+      "product-list-content-mobile"
+    ]
+  },
+  "product-list-content-desktop": {
+    "children": [
+      "flex-layout.row#list-row.desktop"
+    ]
+  },
+  "rich-text#link-cart": {
+    "props": {
+      "text": "[Ver meu carrinho](/checkout/#/cart)"
+    }
+  },
+  "flex-layout.row#list-row.desktop": {
+    "children": [
+      "flex-layout.col#image.desktop",
+      "flex-layout.col#main-container.desktop"
+    ],
+    "props": {
+      "fullWidth": true,
+      "paddingBottom": "7",
+      "paddingTop": "6",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": "true"
+    }
+  },
+  "flex-layout.col#image.desktop": {
+    "children": [
+      "product-list-image"
+    ],
+    "props": {
+      "marginRight": "6"
+    }
+  },
+  "flex-layout.col#main-container.desktop": {
+    "children": [
+      "flex-layout.row#sub-container.desktop",
+      "flex-layout.row#message.desktop"
+    ],
+    "props": {
+      "width": "grow"
+    }
+  },
+  "flex-layout.row#sub-container.desktop": {
+    "children": [
+      "flex-layout.col#product-description",
+      "flex-layout.row#price-remove",
+      "flex-layout.col#quantity.desktop"
+    ],
+    "props": {
+      "preserveLayoutOnMobile": "true",
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.col#quantity.desktop": {
+    "children": [
+      "flex-layout.row#quantity-selector.desktop"
+    ],
+    "props": {
+      "marginLeft": "8"
+    }
+  },
+  "flex-layout.row#price-remove": {
+    "children": [
+      "flex-layout.col#price.desktop",
+      "flex-layout.col#remove-button.desktop"
+    ],
+    "props": {
+      "colSizing": "auto"
+    }
+  },
+  "flex-layout.row#quantity-selector.desktop": {
+    "children": [
+      "quantity-selector"
+    ],
+    "props": {
+      "preventHorizontalStretch": "true"
+    }
+  },
+  "flex-layout.col#price.desktop": {
+    "children": [
+      "price#desktop"
+    ],
+    "props": {
+      "blockClass": "priceWrapper",
+      "marginLeft": "6",
+      "preventHorizontalStretch": "true",
+      "verticalAlign": "middle"
+    }
+  },
+  "price#desktop": {
+    "props": {
+      "textAlign": "right"
+    }
+  },
+  "flex-layout.col#remove-button.desktop": {
+    "children": [
+      "remove-button"
+    ],
+    "props": {
+      "marginLeft": "6",
+      "verticalAlign": "middle"
+    }
+  },
+  "flex-layout.row#message.desktop": {
+    "children": [
+      "message#desktop"
+    ],
+    "props": {
+      "marginTop": "4"
+    }
+  },
+  "message#desktop": {
+    "props": {
+      "layout": "cols",
+      "text": "teste"
+    }
+  },
+  "product-list-content-mobile": {
+    "children": [
+      "flex-layout.row#list-row.mobile"
+    ]
+  },
+  "flex-layout.row#list-row.mobile": {
+    "children": [
+      "flex-layout.col#image.mobile",
+      "flex-layout.col#main-container.mobile"
+    ],
+    "props": {
+      "fullWidth": true,
+      "paddingBottom": "6",
+      "paddingTop": "5",
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": "true",
+      "blockClass": "minicart-content"
+    }
+  },
+  "flex-layout.col#image.mobile": {
+    "children": [
+      "product-list-image"
+    ],
+    "props": {
+      "blockClass": "minicart-image"
+    }
+  },
+  "flex-layout.col#main-container.mobile": {
+    "children": [
+      "flex-layout.row#top.mobile",
+      "flex-layout.row#quantity-selector.mobile",
+      "flex-layout.row#message.mobile"
+    ],
+    "props": {
+      "width": "grow",
+      "blockClass": "minicart-content"
+    }
+  },
+  "flex-layout.row#top.mobile": {
+    "children": [
+      "flex-layout.col#product-description",
+      "flex-layout.col#remove-button.mobile"
+    ],
+    "props": {
+      "colSizing": "auto",
+      "preserveLayoutOnMobile": "true"
+    }
+  },
+  "flex-layout.row#quantity-selector.mobile": {
+    "children": [
+      "price#mobile",
+      "quantity-selector"
+    ],
+    "props": {
+      "marginTop": "5",
+      "preventHorizontalStretch": "true"
+    }
+  },
+  "flex-layout.row#price.mobile": {
+    "children": [
+      "price#mobile"
+    ],
+    "props": {
+      "marginTop": "0",
+      "preventHorizontalStretch": "true"
+    }
+  },
+  "price#mobile": {
+    "props": {
+      "textAlign": "left"
+    }
+  },
+  "flex-layout.col#remove-button.mobile": {
+    "children": [
+      "remove-button"
+    ],
+    "props": {
+      "marginLeft": "3"
+    }
+  },
+  "flex-layout.row#message.mobile": {
+    "children": [
+      "message#mobile"
+    ],
+    "props": {
+      "marginTop": "3"
+    }
+  },
+  "message#mobile": {
+    "props": {
+      "layout": "rows"
+    }
+  },
+  "quantity-selector": {
+    "props": {
+      "mode": "stepper"
+    }
+  },
+  // HEADER GUNE
+  "header#gune": {
+    "blocks": [
+      "header-layout.desktop#gune",
+      "header-layout.mobile#gune"
+    ]
+  },
+  "header.full#gune": {
+    "blocks": [
+      "header-layout.desktop#gune",
+      "header-layout.mobile#gune"
+    ]
+  },
+  "header-layout.desktop#gune": {
+    "children": [
+      "flex-layout.row#1-desktop-gune",
+      "sticky-layout#desktop-gune"
+    ]
+  },
+  "flex-layout.row#1-desktop-gune": {
+    "children": [
+      "login#notification"
+    ],
+    "props": {
+      "blockClass": [
+        "notification-gune",
+        "notification-gune-lp"
+      ],
+      "fullWidth": "true"
+    }
+  },
+  "sticky-layout#desktop-gune": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#2-desktop-gune"
+    ]
+  },
+  "flex-layout.row#2-desktop-gune": {
+    "props": {
+      "blockClass": [
+        "main-header",
+        "header-gune"
+      ],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": false
+    },
+    "children": [
+      "logo#desktop-gune",
+      "search-bar",
+      "rich-text#wishlist-header",
+      "minicart.v2",
+      "rich-text#profile-header"
+    ]
+  },
+  "logo#desktop-gune": {
+    "props": {
+      "title": "Estrela Gune",
+      "href": "/",
+      "url": "assets/gune-lp.png",
+      "width": "205"
+    }
+  },
+  "header-layout.mobile#gune": {
+    "children": [
+      "flex-layout.row#1-desktop-gune",
+      "sticky-layout#1-mobile-gune"
+    ]
+  },
+  "sticky-layout#1-mobile-gune": {
+    "props": {
+      "blockClass": [
+        "main-header-mobile",
+        "main-header-mobile-gune-lp"
+      ]
+    },
+    "children": [
+      "flex-layout.row#2-mobile-gune",
+      "flex-layout.row#3-mobile-gune"
+    ]
+  },
+  "flex-layout.row#2-mobile-gune": {
+    "children": [
+      "logo#mobile-gune",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": [
+        "main-header-mobile-1",
+        "main-header-mobile-gune-lp-1"
+      ],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#3-mobile-gune": {
+    "children": [
+      "search-bar"
+    ],
+    "props": {
+      "blockClass": [
+        "main-header-mobile-2",
+        "main-header-mobile-gune-lp-2"
+      ],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "logo#mobile-gune": {
+    "props": {
+      "title": "Gune | Estrela",
+      "href": "/",
+      "url": "assets/gune-lp.png",
+      "width": "150"
+    }
+  },
+  // FOOTER GUNE
+  "footer#gune": {
+    "blocks": [
+      "footer-layout.desktop#gune",
+      "footer-layout.mobile#gune"
+    ]
+  },
+  "footer-layout.desktop#gune": {
+    "children": [
+      "flex-layout.row#footer-1-desktop-gune",
+      "flex-layout.row#footer-2-desktop-gune",
+      "flex-layout.row#footer-3-desktop-gune",
+      "flex-layout.row#footer-4-desktop-gune"
+    ]
+  },
+  "flex-layout.row#footer-1-desktop-gune": {
+    "children": [
+      "flex-layout.col#footer-1-1-desktop",
+      "flex-layout.col#footer-1-2-desktop"
+    ],
+    "props": {
+      "blockClass": [
+        "newsletter",
+        "footer-1-gune"
+      ],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "fullWidth": false
+    }
+  },
+  "flex-layout.row#footer-2-desktop-gune": {
+    "children": [
+      "flex-layout.col#footer-2-desktop-1",
+      "flex-layout.col#footer-2-desktop-2",
+      "flex-layout.col#footer-2-desktop-3",
+      "flex-layout.col#footer-2-desktop-4",
+      "flex-layout.col#footer-2-desktop-5"
+    ],
+    "props": {
+      "blockClass": [
+        "menu-footer",
+        "footer-2-gune"
+      ],
+      "fullWidth": false
+    }
+  },
+  "flex-layout.row#footer-3-desktop-gune": {
+    "props": {
+      "blockClass": [
+        "footer-3-desktop",
+        "footer-3-gune"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-desktop-1",
+      "flex-layout.col#footer-3-desktop-2",
+      "flex-layout.col#footer-3-desktop-3"
+    ]
+  },
+  "flex-layout.row#footer-4-desktop-gune": {
+    "children": [
+      "rich-text#footer-bottom"
+    ],
+    "props": {
+      "blockClass": [
+        "footer-bottom",
+        "footer-4-gune"
+      ]
+    }
+  },
+  "footer-layout.mobile#gune": {
+    "children": [
+      "back-to-top-button",
+      "flex-layout.row#footer-1-desktop-gune",
+      "flex-layout.row#footer-1-mobile-gune",
+      "flex-layout.row#footer-2-mobile-gune",
+      "flex-layout.row#footer-3-mobile-gune",
+      "flex-layout.row#footer-4-mobile-gune",
+      "flex-layout.row#footer-4-desktop",
+      "flex-layout.row#footer-5-mobile-gune"
+    ]
+  },
+  "flex-layout.row#footer-1-mobile-gune": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-1",
+        "footer-mobile-1-gune"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-2",
+      "flex-layout.col#footer-2-desktop-3"
+    ]
+  },
+  "flex-layout.row#footer-2-mobile-gune": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-2-gune"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-4"
+    ]
+  },
+  "flex-layout.row#footer-3-mobile-gune": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-3",
+        "footer-mobile-3-gune"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-5"
+    ]
+  },
+  "flex-layout.row#footer-4-mobile-gune": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-3-desktop",
+        "footer-mobile-3-gune"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-desktop-1",
+      "flex-layout.col#footer-3-desktop-2"
+    ]
+  },
+  "flex-layout.row#footer-5-mobile-gune": {
+    "props": {
+      "blockClass": [
+        "logo-waba",
+        "footer-mobile-5-gune"
+      ]
+    },
+    "children": [
+      "image#img-waba-mobile"
+    ]
+  },
+  // HEADER FLORA
+  "header#flora": {
+    "blocks": [
+      "header-layout.desktop#flora",
+      "header-layout.mobile#flora"
+    ]
+  },
+  "header.full#flora": {
+    "blocks": [
+      "header-layout.desktop#flora",
+      "header-layout.mobile#flora"
+    ]
+  },
+  "header-layout.desktop#flora": {
+    "children": [
+      "flex-layout.row#1-desktop-flora",
+      "sticky-layout#desktop-flora"
+    ]
+  },
+  "flex-layout.row#1-desktop-flora": {
+    "children": [
+      "login#notification"
+    ],
+    "props": {
+      "blockClass": [
+        "notification-flora",
+        "notification-flora-lp"
+      ],
+      "fullWidth": "true"
+    }
+  },
+  "sticky-layout#desktop-flora": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#2-desktop-flora"
+    ]
+  },
+  "flex-layout.row#2-desktop-flora": {
+    "props": {
+      "blockClass": [
+        "main-header",
+        "header-flora"
+      ],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": false
+    },
+    "children": [
+      "logo#desktop-flora",
+      "search-bar",
+      "rich-text#wishlist-header",
+      "minicart.v2",
+      "rich-text#profile-header"
+    ]
+  },
+  "logo#desktop-flora": {
+    "props": {
+      "title": "Estrela flora",
+      "href": "/",
+      "url": "assets/logo-flora-lp.svg",
+      "width": "205"
+    }
+  },
+  "header-layout.mobile#flora": {
+    "children": [
+      "flex-layout.row#1-desktop-flora",
+      "sticky-layout#1-mobile-flora"
+    ]
+  },
+  "sticky-layout#1-mobile-flora": {
+    "props": {
+      "blockClass": [
+        "main-header-mobile",
+        "main-header-mobile-flora-lp"
+      ]
+    },
+    "children": [
+      "flex-layout.row#2-mobile-flora",
+      "flex-layout.row#3-mobile-flora"
+    ]
+  },
+  "flex-layout.row#2-mobile-flora": {
+    "children": [
+      "logo#mobile-flora",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": [
+        "main-header-mobile-1",
+        "main-header-mobile-flora-lp-1"
+      ],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#3-mobile-flora": {
+    "children": [
+      "search-bar"
+    ],
+    "props": {
+      "blockClass": [
+        "main-header-mobile-2",
+        "main-header-mobile-flora-lp-2"
+      ],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "logo#mobile-flora": {
+    "props": {
+      "title": "flora | Estrela",
+      "href": "/",
+      "url": "assets/logo-flora-lp.svg",
+      "width": "92"
+    }
+  },
+  // FOOTER FLORA
+  "footer#flora": {
+    "blocks": [
+      "footer-layout.desktop#flora",
+      "footer-layout.mobile#flora"
+    ]
+  },
+  "footer-layout.desktop#flora": {
+    "children": [
+      "flex-layout.row#footer-1-desktop-flora",
+      "flex-layout.row#footer-2-desktop-flora",
+      "flex-layout.row#footer-3-desktop-flora",
+      "flex-layout.row#footer-4-desktop-flora"
+    ]
+  },
+  "flex-layout.row#footer-1-desktop-flora": {
+    "children": [
+      "flex-layout.col#footer-1-1-desktop",
+      "flex-layout.col#footer-1-2-desktop"
+    ],
+    "props": {
+      "blockClass": [
+        "newsletter",
+        "footer-1-flora"
+      ],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "fullWidth": false
+    }
+  },
+  "flex-layout.row#footer-2-desktop-flora": {
+    "children": [
+      "flex-layout.col#footer-2-desktop-1",
+      "flex-layout.col#footer-2-desktop-2",
+      "flex-layout.col#footer-2-desktop-3",
+      "flex-layout.col#footer-2-desktop-4",
+      "flex-layout.col#footer-2-desktop-5"
+    ],
+    "props": {
+      "blockClass": [
+        "menu-footer",
+        "footer-2-flora"
+      ],
+      "fullWidth": false
+    }
+  },
+  "flex-layout.row#footer-3-desktop-flora": {
+    "props": {
+      "blockClass": [
+        "footer-3-desktop",
+        "footer-3-flora"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-desktop-1",
+      "flex-layout.col#footer-3-desktop-2",
+      "flex-layout.col#footer-3-desktop-3"
+    ]
+  },
+  "flex-layout.row#footer-4-desktop-flora": {
+    "children": [
+      "rich-text#footer-bottom"
+    ],
+    "props": {
+      "blockClass": [
+        "footer-bottom",
+        "footer-4-flora"
+      ]
+    }
+  },
+  "footer-layout.mobile#flora": {
+    "children": [
+      "back-to-top-button",
+      "flex-layout.row#footer-1-desktop-flora",
+      "flex-layout.row#footer-1-mobile-flora",
+      "flex-layout.row#footer-2-mobile-flora",
+      "flex-layout.row#footer-3-mobile-flora",
+      "flex-layout.row#footer-4-mobile-flora",
+      "flex-layout.row#footer-4-desktop",
+      "flex-layout.row#footer-5-mobile-flora"
+    ]
+  },
+  "flex-layout.row#footer-1-mobile-flora": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-1",
+        "footer-mobile-1-flora"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-2",
+      "flex-layout.col#footer-2-desktop-3"
+    ]
+  },
+  "flex-layout.row#footer-2-mobile-flora": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-2-flora"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-4"
+    ]
+  },
+  "flex-layout.row#footer-3-mobile-flora": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-3",
+        "footer-mobile-3-flora"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-5"
+    ]
+  },
+  "flex-layout.row#footer-4-mobile-flora": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-3-desktop",
+        "footer-mobile-3-flora"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-desktop-1",
+      "flex-layout.col#footer-3-desktop-2"
+    ]
+  },
+  "flex-layout.row#footer-5-mobile-flora": {
+    "props": {
+      "blockClass": [
+        "logo-waba",
+        "footer-mobile-5-flora"
+      ]
+    },
+    "children": [
+      "image#img-waba-mobile"
+    ]
+  },
+  // HEADER MONDELEZ
+  "header#mondelez": {
+    "blocks": [
+      "header-layout.desktop#mondelez",
+      "header-layout.mobile#mondelez"
+    ]
+  },
+  "header.full#mondelez": {
+    "blocks": [
+      "header-layout.desktop#mondelez",
+      "header-layout.mobile#mondelez"
+    ]
+  },
+  "header-layout.desktop#mondelez": {
+    "children": [
+      "flex-layout.row#1-desktop-mondelez",
+      "sticky-layout#desktop-mondelez"
+    ]
+  },
+  "flex-layout.row#1-desktop-mondelez": {
+    "children": [
+      "login#notification"
+    ],
+    "props": {
+      "blockClass": [
+        "notification-mondelez",
+        "notification-mondelez-lp"
+      ],
+      "fullWidth": "true"
+    }
+  },
+  "sticky-layout#desktop-mondelez": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#2-desktop-mondelez"
+    ]
+  },
+  "flex-layout.row#2-desktop-mondelez": {
+    "props": {
+      "blockClass": [
+        "main-header",
+        "header-mondelez"
+      ],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": false
+    },
+    "children": [
+      "logo#desktop-mondelez",
+      "search-bar",
+      "rich-text#wishlist-header",
+      "minicart.v2",
+      "rich-text#profile-header"
+    ]
+  },
+  "logo#desktop-mondelez": {
+    "props": {
+      "title": "Estrela mondelez",
+      "href": "/",
+      "url": "assets/mondelez-lp.svg",
+      "width": "205"
+    }
+  },
+  "header-layout.mobile#mondelez": {
+    "children": [
+      "flex-layout.row#1-desktop-mondelez",
+      "sticky-layout#1-mobile-mondelez"
+    ]
+  },
+  "sticky-layout#1-mobile-mondelez": {
+    "props": {
+      "blockClass": [
+        "main-header-mobile",
+        "main-header-mobile-mondelez-lp"
+      ]
+    },
+    "children": [
+      "flex-layout.row#2-mobile-mondelez",
+      "flex-layout.row#3-mobile-mondelez"
+    ]
+  },
+  "flex-layout.row#2-mobile-mondelez": {
+    "children": [
+      "logo#mobile-mondelez",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": [
+        "main-header-mobile-1",
+        "main-header-mobile-mondelez-lp-1"
+      ],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#3-mobile-mondelez": {
+    "children": [
+      "search-bar"
+    ],
+    "props": {
+      "blockClass": [
+        "main-header-mobile-2",
+        "main-header-mobile-mondelez-lp-1"
+      ],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "logo#mobile-mondelez": {
+    "props": {
+      "title": "mondelez | Estrela",
+      "href": "/",
+      "url": "assets/mondelez-lp.svg",
+      "width": "152"
+    }
+  },
+  // FOOTER MONDELEZ
+  "footer#mondelez": {
+    "blocks": [
+      "footer-layout.desktop#mondelez",
+      "footer-layout.mobile#mondelez"
+    ]
+  },
+  "footer-layout.desktop#mondelez": {
+    "children": [
+      "flex-layout.row#footer-1-desktop-mondelez",
+      "flex-layout.row#footer-2-desktop-mondelez",
+      "flex-layout.row#footer-3-desktop-mondelez",
+      "flex-layout.row#footer-4-desktop-mondelez"
+    ]
+  },
+  "flex-layout.row#footer-1-desktop-mondelez": {
+    "children": [
+      "flex-layout.col#footer-1-1-desktop",
+      "flex-layout.col#footer-1-2-desktop"
+    ],
+    "props": {
+      "blockClass": [
+        "newsletter",
+        "footer-1-mondelez"
+      ],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "fullWidth": false
+    }
+  },
+  "flex-layout.row#footer-2-desktop-mondelez": {
+    "children": [
+      "flex-layout.col#footer-2-desktop-1",
+      "flex-layout.col#footer-2-desktop-2",
+      "flex-layout.col#footer-2-desktop-3",
+      "flex-layout.col#footer-2-desktop-4",
+      "flex-layout.col#footer-2-desktop-5"
+    ],
+    "props": {
+      "blockClass": [
+        "menu-footer",
+        "footer-2-mondelez"
+      ],
+      "fullWidth": false
+    }
+  },
+  "flex-layout.row#footer-3-desktop-mondelez": {
+    "props": {
+      "blockClass": [
+        "footer-3-desktop",
+        "footer-3-mondelez"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-desktop-1",
+      "flex-layout.col#footer-3-desktop-2",
+      "flex-layout.col#footer-3-desktop-3"
+    ]
+  },
+  "flex-layout.row#footer-4-desktop-mondelez": {
+    "children": [
+      "rich-text#footer-bottom"
+    ],
+    "props": {
+      "blockClass": [
+        "footer-bottom",
+        "footer-4-mondelez"
+      ]
+    }
+  },
+  "footer-layout.mobile#mondelez": {
+    "children": [
+      "back-to-top-button",
+      "flex-layout.row#footer-1-desktop-mondelez",
+      "flex-layout.row#footer-1-mobile-mondelez",
+      "flex-layout.row#footer-2-mobile-mondelez",
+      "flex-layout.row#footer-3-mobile-mondelez",
+      "flex-layout.row#footer-4-mobile-mondelez",
+      "flex-layout.row#footer-4-desktop",
+      "flex-layout.row#footer-5-mobile-mondelez"
+    ]
+  },
+  "flex-layout.row#footer-1-mobile-mondelez": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-1",
+        "footer-mobile-1-mondelez"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-2",
+      "flex-layout.col#footer-2-desktop-3"
+    ]
+  },
+  "flex-layout.row#footer-2-mobile-mondelez": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-2-mondelez"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-4"
+    ]
+  },
+  "flex-layout.row#footer-3-mobile-mondelez": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-3",
+        "footer-mobile-3-mondelez"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-5"
+    ]
+  },
+  "flex-layout.row#footer-4-mobile-mondelez": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-3-desktop",
+        "footer-mobile-3-mondelez"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-desktop-1",
+      "flex-layout.col#footer-3-desktop-2"
+    ]
+  },
+  "flex-layout.row#footer-5-mobile-mondelez": {
+    "props": {
+      "blockClass": [
+        "logo-waba",
+        "footer-mobile-5-mondelez"
+      ]
+    },
+    "children": [
+      "image#img-waba-mobile"
+    ]
+  },
+  // HEADER PERNORD RICARD
+  "header#pernod-ricard": {
+    "blocks": [
+      "header-layout.desktop#pernod-ricard",
+      "header-layout.mobile#pernod-ricard"
+    ]
+  },
+  "header.full#pernod-ricard": {
+    "blocks": [
+      "header-layout.desktop#pernod-ricard",
+      "header-layout.mobile#pernod-ricard"
+    ]
+  },
+  "header-layout.desktop#pernod-ricard": {
+    "children": [
+      "flex-layout.row#1-desktop-pernod-ricard",
+      "sticky-layout#desktop-pernod-ricard"
+    ]
+  },
+  "flex-layout.row#1-desktop-pernod-ricard": {
+    "children": [
+      "login#notification"
+    ],
+    "props": {
+      "blockClass": [
+        "notification-pernod-ricard",
+        "notification-pernod-ricard-lp"
+      ],
+      "fullWidth": "true"
+    }
+  },
+  "sticky-layout#desktop-pernod-ricard": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#2-desktop-pernod-ricard"
+    ]
+  },
+  "flex-layout.row#2-desktop-pernod-ricard": {
+    "props": {
+      "blockClass": [
+        "main-header",
+        "header-pernod-ricard"
+      ],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": false
+    },
+    "children": [
+      "logo#desktop-pernod-ricard",
+      "search-bar",
+      "rich-text#wishlist-header",
+      "minicart.v2",
+      "rich-text#profile-header"
+    ]
+  },
+  "logo#desktop-pernod-ricard": {
+    "props": {
+      "title": "Estrela pernod-ricard",
+      "href": "/",
+      "url": "assets/pernod-ricard-lp.svg",
+      "width": "205"
+    }
+  },
+  "header-layout.mobile#pernod-ricard": {
+    "children": [
+      "flex-layout.row#1-desktop-pernod-ricard",
+      "sticky-layout#1-mobile-pernod-ricard"
+    ]
+  },
+  "sticky-layout#1-mobile-pernod-ricard": {
+    "props": {
+      "blockClass": [
+        "main-header-mobile",
+        "main-header-mobile-pernod-ricard-lp"
+      ]
+    },
+    "children": [
+      "flex-layout.row#2-mobile-pernod-ricard",
+      "flex-layout.row#3-mobile-pernod-ricard"
+    ]
+  },
+  "flex-layout.row#2-mobile-pernod-ricard": {
+    "children": [
+      "logo#mobile-pernod-ricard",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": [
+        "main-header-mobile-1",
+        "main-header-mobile-pernod-ricard-lp-1"
+      ],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#3-mobile-pernod-ricard": {
+    "children": [
+      "search-bar"
+    ],
+    "props": {
+      "blockClass": [
+        "main-header-mobile-2",
+        "main-header-mobile-pernod-ricard-lp-2"
+      ],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "logo#mobile-pernod-ricard": {
+    "props": {
+      "title": "pernod-ricard | Estrela",
+      "href": "/",
+      "url": "assets/pernod-ricard-lp.svg",
+      "width": "222"
+    }
+  },
+  // FOOTER pernod-ricard
+  "footer#pernod-ricard": {
+    "blocks": [
+      "footer-layout.desktop#pernod-ricard",
+      "footer-layout.mobile#pernod-ricard"
+    ]
+  },
+  "footer-layout.desktop#pernod-ricard": {
+    "children": [
+      "flex-layout.row#footer-1-desktop-pernod-ricard",
+      "flex-layout.row#footer-2-desktop-pernod-ricard",
+      "flex-layout.row#footer-3-desktop-pernod-ricard",
+      "flex-layout.row#footer-4-desktop-pernod-ricard"
+    ]
+  },
+  "flex-layout.row#footer-1-desktop-pernod-ricard": {
+    "children": [
+      "flex-layout.col#footer-1-1-desktop",
+      "flex-layout.col#footer-1-2-desktop"
+    ],
+    "props": {
+      "blockClass": [
+        "newsletter",
+        "footer-1-pernod-ricard"
+      ],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "fullWidth": false
+    }
+  },
+  "flex-layout.row#footer-2-desktop-pernod-ricard": {
+    "children": [
+      "flex-layout.col#footer-2-desktop-1",
+      "flex-layout.col#footer-2-desktop-2",
+      "flex-layout.col#footer-2-desktop-3",
+      "flex-layout.col#footer-2-desktop-4",
+      "flex-layout.col#footer-2-desktop-5"
+    ],
+    "props": {
+      "blockClass": [
+        "menu-footer",
+        "footer-2-pernod-ricard"
+      ],
+      "fullWidth": false
+    }
+  },
+  "flex-layout.row#footer-3-desktop-pernod-ricard": {
+    "props": {
+      "blockClass": [
+        "footer-3-desktop",
+        "footer-3-pernod-ricard"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-desktop-1",
+      "flex-layout.col#footer-3-desktop-2",
+      "flex-layout.col#footer-3-desktop-3"
+    ]
+  },
+  "flex-layout.row#footer-4-desktop-pernod-ricard": {
+    "children": [
+      "rich-text#footer-bottom"
+    ],
+    "props": {
+      "blockClass": [
+        "footer-bottom",
+        "footer-4-pernod-ricard"
+      ]
+    }
+  },
+  "footer-layout.mobile#pernod-ricard": {
+    "children": [
+      "back-to-top-button",
+      "flex-layout.row#footer-1-desktop-pernod-ricard",
+      "flex-layout.row#footer-1-mobile-pernod-ricard",
+      "flex-layout.row#footer-2-mobile-pernod-ricard",
+      "flex-layout.row#footer-3-mobile-pernod-ricard",
+      "flex-layout.row#footer-4-mobile-pernod-ricard",
+      "flex-layout.row#footer-4-desktop",
+      "flex-layout.row#footer-5-mobile-pernod-ricard"
+    ]
+  },
+  "flex-layout.row#footer-1-mobile-pernod-ricard": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-1",
+        "footer-mobile-1-pernod-ricard"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-2",
+      "flex-layout.col#footer-2-desktop-3"
+    ]
+  },
+  "flex-layout.row#footer-2-mobile-pernod-ricard": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-2-pernod-ricard"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-4"
+    ]
+  },
+  "flex-layout.row#footer-3-mobile-pernod-ricard": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-3",
+        "footer-mobile-3-pernod-ricard"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-5"
+    ]
+  },
+  "flex-layout.row#footer-4-mobile-pernod-ricard": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-3-desktop",
+        "footer-mobile-3-pernod-ricard"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-desktop-1",
+      "flex-layout.col#footer-3-desktop-2"
+    ]
+  },
+  "flex-layout.row#footer-5-mobile-pernod-ricard": {
+    "props": {
+      "blockClass": [
+        "logo-waba",
+        "footer-mobile-5-pernod-ricard"
+      ]
+    },
+    "children": [
+      "image#img-waba-mobile"
+    ]
+  },
+  // HEADER UNILEVER
+  "header#unilever": {
+    "blocks": [
+      "header-layout.desktop#unilever",
+      "header-layout.mobile#unilever"
+    ]
+  },
+  "header.full#unilever": {
+    "blocks": [
+      "header-layout.desktop#unilever",
+      "header-layout.mobile#unilever"
+    ]
+  },
+  "header-layout.desktop#unilever": {
+    "children": [
+      "flex-layout.row#1-desktop-unilever",
+      "sticky-layout#desktop-unilever"
+    ]
+  },
+  "flex-layout.row#1-desktop-unilever": {
+    "children": [
+      "login#notification"
+    ],
+    "props": {
+      "blockClass": [
+        "notification-unilever",
+        "notification-unilever-lp"
+      ],
+      "fullWidth": "true"
+    }
+  },
+  "sticky-layout#desktop-unilever": {
+    "props": {
+      "blockClass": "sticky-header"
+    },
+    "children": [
+      "flex-layout.row#2-desktop-unilever"
+    ]
+  },
+  "flex-layout.row#2-desktop-unilever": {
+    "props": {
+      "blockClass": [
+        "main-header",
+        "header-unilever"
+      ],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": false
+    },
+    "children": [
+      "logo#desktop-unilever",
+      "search-bar",
+      "rich-text#wishlist-header",
+      "minicart.v2",
+      "rich-text#profile-header"
+    ]
+  },
+  "logo#desktop-unilever": {
+    "props": {
+      "title": "Estrela unilever",
+      "href": "/",
+      "url": "assets/unilever-lp.svg",
+      "width": "205"
+    }
+  },
+  "header-layout.mobile#unilever": {
+    "children": [
+      "flex-layout.row#1-desktop-unilever",
+      "sticky-layout#1-mobile-unilever"
+    ]
+  },
+  "sticky-layout#1-mobile-unilever": {
+    "props": {
+      "blockClass": [
+        "main-header-mobile",
+        "main-header-mobile-unilever-lp"
+      ]
+    },
+    "children": [
+      "flex-layout.row#2-mobile-unilever",
+      "flex-layout.row#3-mobile-unilever"
+    ]
+  },
+  "flex-layout.row#2-mobile-unilever": {
+    "children": [
+      "logo#mobile-unilever",
+      "minicart.v2"
+    ],
+    "props": {
+      "blockClass": [
+        "main-header-mobile-1",
+        "main-header-mobile-unilever-lp-1"
+      ],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#3-mobile-unilever": {
+    "children": [
+      "search-bar"
+    ],
+    "props": {
+      "blockClass": [
+        "main-header-mobile-2",
+        "main-header-mobile-unilever-lp-2"
+      ],
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "logo#mobile-unilever": {
+    "props": {
+      "title": "unilever | Estrela",
+      "href": "/",
+      "url": "assets/unilever-lp.svg",
+      "width": "158"
+    }
+  },
+  // FOOTER UNILEVER
+  "footer#unilever": {
+    "blocks": [
+      "footer-layout.desktop#unilever",
+      "footer-layout.mobile#unilever"
+    ]
+  },
+  "footer-layout.desktop#unilever": {
+    "children": [
+      "flex-layout.row#footer-1-desktop-unilever",
+      "flex-layout.row#footer-2-desktop-unilever",
+      "flex-layout.row#footer-3-desktop-unilever",
+      "flex-layout.row#footer-4-desktop-unilever"
+    ]
+  },
+  "flex-layout.row#footer-1-desktop-unilever": {
+    "children": [
+      "flex-layout.col#footer-1-1-desktop",
+      "flex-layout.col#footer-1-2-desktop"
+    ],
+    "props": {
+      "blockClass": [
+        "newsletter",
+        "footer-1-unilever"
+      ],
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "fullWidth": false
+    }
+  },
+  "flex-layout.row#footer-2-desktop-unilever": {
+    "children": [
+      "flex-layout.col#footer-2-desktop-1",
+      "flex-layout.col#footer-2-desktop-2",
+      "flex-layout.col#footer-2-desktop-3",
+      "flex-layout.col#footer-2-desktop-4",
+      "flex-layout.col#footer-2-desktop-5"
+    ],
+    "props": {
+      "blockClass": [
+        "menu-footer",
+        "footer-2-unilever"
+      ],
+      "fullWidth": false
+    }
+  },
+  "flex-layout.row#footer-3-desktop-unilever": {
+    "props": {
+      "blockClass": [
+        "footer-3-desktop",
+        "footer-3-unilever"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-desktop-1",
+      "flex-layout.col#footer-3-desktop-2",
+      "flex-layout.col#footer-3-desktop-3"
+    ]
+  },
+  "flex-layout.row#footer-4-desktop-unilever": {
+    "children": [
+      "rich-text#footer-bottom"
+    ],
+    "props": {
+      "blockClass": [
+        "footer-bottom",
+        "footer-4-unilever"
+      ]
+    }
+  },
+  "footer-layout.mobile#unilever": {
+    "children": [
+      "back-to-top-button",
+      "flex-layout.row#footer-1-desktop-unilever",
+      "flex-layout.row#footer-1-mobile-unilever",
+      "flex-layout.row#footer-2-mobile-unilever",
+      "flex-layout.row#footer-3-mobile-unilever",
+      "flex-layout.row#footer-4-mobile-unilever",
+      "flex-layout.row#footer-4-desktop",
+      "flex-layout.row#footer-5-mobile-unilever"
+    ]
+  },
+  "flex-layout.row#footer-1-mobile-unilever": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-1",
+        "footer-mobile-1-unilever"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-2",
+      "flex-layout.col#footer-2-desktop-3"
+    ]
+  },
+  "flex-layout.row#footer-2-mobile-unilever": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-2-unilever"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-4"
+    ]
+  },
+  "flex-layout.row#footer-3-mobile-unilever": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-mobile-3",
+        "footer-mobile-3-unilever"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-2-desktop-5"
+    ]
+  },
+  "flex-layout.row#footer-4-mobile-unilever": {
+    "props": {
+      "blockClass": [
+        "footer-mobile",
+        "footer-3-desktop",
+        "footer-mobile-3-unilever"
+      ]
+    },
+    "children": [
+      "flex-layout.col#footer-3-desktop-1",
+      "flex-layout.col#footer-3-desktop-2"
+    ]
+  },
+  "flex-layout.row#footer-5-mobile-unilever": {
+    "props": {
+      "blockClass": [
+        "logo-waba",
+        "footer-mobile-5-unilever"
+      ]
+    },
+    "children": [
+      "image#img-waba-mobile"
+    ]
+  }
+}

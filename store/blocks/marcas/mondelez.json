@@ -1,0 +1,575 @@
+{
+    "store.custom#mondelez": {
+        "blocks": [
+            "flex-layout.row#banner-principal-mondelez",
+            "flex-layout.row#fornecedores-mondelez",
+            "flex-layout.row#promocoes-mondelez",
+            "flex-layout.row#lancamentos-mondelez",
+            "flex-layout.row#melhores-produtos-mondelez",
+            "flex-layout.row#ofertas-mondelez",
+            "flex-layout.row#mais-vendidos-mondelez"
+        ],
+        "parent": {
+            "header": "header#mondelez",
+            "footer": "footer#mondelez"
+        }
+    },
+    "flex-layout.row#banner-principal-mondelez": {
+        "children": [
+            "list-context.image-list#banner-principal-mondelez"
+        ],
+        "props": {
+            "horizontalAlign": "center",
+            "preventHorizontalStretch": true,
+            "preventVerticalStretch": true,
+            "fullWidth": true,
+            "blockClass": "banner-principal",
+            "title": "Banner Principal"
+        }
+    },
+    "list-context.image-list#banner-principal-mondelez": {
+        "children": [
+            "slider-layout#banner-principal-mondelez"
+        ],
+        "props": {
+            "height": "493px",
+            "images": [
+                {
+                    "image": "assets/estrela-lp-banner-full-provisorio.png",
+                    "mobileImage": "assets/aa.png"
+                },
+                {
+                    "image": "assets/estrela-lp-banner-full-provisorio.png",
+                    "mobileImage": "assets/aa.png"
+                },
+                {
+                    "image": "assets/estrela-lp-banner-full-provisorio.png",
+                    "mobileImage": "assets/aa.png"
+                }
+            ]
+        }
+    },
+    "slider-layout#banner-principal-mondelez": {
+        "props": {
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "infinite": true,
+            "showPaginationDots": "mobileOnly",
+            "showNavigationArrows": "always",
+            "blockClass": "banner-principal",
+            "autoplay": {
+                "timeout": "4000",
+                "stopOnHover": true
+            }
+        }
+    },
+    "flex-layout.row#fornecedores-mondelez": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "fornecedores"
+            ]
+        },
+        "children": [
+            "flex-layout.col#fornecedores-mondelez"
+        ]
+    },
+    "flex-layout.col#fornecedores-mondelez": {
+        "props": {
+            "blockClass": "fornecedores"
+        },
+        "children": [
+            "rich-text#title-fornecedores-mondelez",
+            "slider-layout#fornecedores-mondelez"
+        ]
+    },
+    "rich-text#title-fornecedores-mondelez": {
+        "props": {
+            "text": "## TRABALHAMOS COM OS MELHORES FORNECEDORES",
+            "blockClass": [
+                "title-padrao",
+                "title-fornecedores",
+                "title-mandelez"
+            ]
+        }
+    },
+    "slider-layout#fornecedores-mondelez": {
+        "children": [
+            "image#fornecedor-1-mondelez",
+            "image#fornecedor-2-mondelez",
+            "image#fornecedor-3-mondelez",
+            "image#fornecedor-4-mondelez",
+            "image#fornecedor-5-mondelez",
+            "image#fornecedor-6-mondelez",
+            "image#fornecedor-7-mondelez"
+        ],
+        "props": {
+            "itemsPerPage": {
+                "desktop": 5,
+                "tablet": 2,
+                "phone": 2
+            },
+            "infinite": true,
+            "fullWidth": true,
+            "showPaginationDots": "never",
+            "showNavigationArrows": "always",
+            "blockClass": "slider-fornecedores"
+        }
+    },
+    "image#fornecedor-1-mondelez": {
+        "props": {
+            "src": "assets/marcas_BIS.png",
+            "alt": "Unilever",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/unilever"
+            }
+        }
+    },
+    "image#fornecedor-2-mondelez": {
+        "props": {
+            "src": "assets/marcas_BUBALLOO.png",
+            "alt": "Mondelez",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/mondelez"
+            }
+        }
+    },
+    "image#fornecedor-3-mondelez": {
+        "props": {
+            "src": "assets/marcas_Chiclets.png",
+            "alt": "Diageo",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/diageo"
+            }
+        }
+    },
+    "image#fornecedor-4-mondelez": {
+        "props": {
+            "src": "assets/marcas_HALLS.png",
+            "alt": "Colgate",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/colgate"
+            }
+        }
+    },
+    "image#fornecedor-5-mondelez": {
+        "props": {
+            "src": "assets/marcas_OREO.png",
+            "alt": "Mondial",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/mondial"
+            }
+        }
+    },
+    "image#fornecedor-6-mondelez": {
+        "props": {
+            "src": "assets/marcas_ROYAL.png",
+            "alt": "Unilever",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/unilever"
+            }
+        }
+    },
+    "image#fornecedor-7-mondelez": {
+        "props": {
+            "src": "assets/marcas_TRIDENT.png",
+            "alt": "Mondelez",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/mondelez"
+            }
+        }
+    },
+    "flex-layout.row#promocoes-mondelez": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "vantagens"
+            ]
+        },
+        "children": [
+            "flex-layout.col#promocoes-mondelez"
+        ]
+    },
+    "flex-layout.col#promocoes-mondelez": {
+        "props": {
+            "blockClass": "destaque-home"
+        },
+        "children": [
+            "rich-text#title-promocoes-mondelez",
+            "flex-layout.row#promocoes-mondelez-1"
+        ]
+    },
+    "rich-text#title-promocoes-mondelez": {
+        "props": {
+            "text": "## PROMOÇÕES DO MÊS",
+            "blockClass": [
+                "title-padrao",
+                "title-vantagens",
+                "title-mandelez"
+            ]
+        }
+    },
+    "flex-layout.row#promocoes-mondelez-1": {
+        "props": {
+            "blockClass": "vantagens-int"
+        },
+        "children": [
+            "slider-layout#promocoes-mondelez"
+        ]
+    },
+    "slider-layout#promocoes-mondelez": {
+        "children": [
+            "image#promocoes-mondelez-1",
+            "image#promocoes-mondelez-2",
+            "image#promocoes-mondelez-3",
+            "image#promocoes-mondelez-4",
+            "image#promocoes-mondelez-5",
+            "image#promocoes-mondelez-6",
+            "image#promocoes-mondelez-7",
+            "image#promocoes-mondelez-8"
+        ],
+        "props": {
+            "itemsPerPage": {
+                "desktop": 4,
+                "tablet": 2,
+                "phone": 2
+            },
+            "infinite": true,
+            "fullWidth": true,
+            "showPaginationDots": "never",
+            "showNavigationArrows": "always",
+            "blockClass": "slider-vantagens"
+        }
+    },
+    "image#promocoes-mondelez-1": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/mondelez1.png",
+            "alt": "Banner mondelez",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-mondelez-2": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/mondelez2.png",
+            "alt": "Banner mondelez",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-mondelez-3": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/mondelez3.png",
+            "alt": "Banner mondelez",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-mondelez-4": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/mondelez4.png",
+            "alt": "Banner mondelez",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-mondelez-5": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/mondelez1.png",
+            "alt": "Banner mondelez",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-mondelez-6": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/mondelez2.png",
+            "alt": "Banner mondelez",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-mondelez-7": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/mondelez3.png",
+            "alt": "Banner mondelez",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-mondelez-8": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/mondelez4.png",
+            "alt": "Banner mondelez",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "flex-layout.row#lancamentos-mondelez": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "ofertas"
+            ]
+        },
+        "children": [
+            "flex-layout.col#lancamentos-mondelez"
+        ]
+    },
+    "flex-layout.col#lancamentos-mondelez": {
+        "props": {
+            "blockClass": "destaque-home"
+        },
+        "children": [
+            "rich-text#title-lancamentos-mondelez",
+            "flex-layout.row#shelf-lancamentos-mondelez-1"
+        ]
+    },
+    "rich-text#title-lancamentos-mondelez": {
+        "props": {
+            "text": "## LANÇAMENTOS",
+            "blockClass": [
+                "title-padrao",
+                "title-ofertas",
+                "title-mandelez"
+            ]
+        }
+    },
+    "flex-layout.row#shelf-lancamentos-mondelez-1": {
+        "children": [
+            "list-context.product-list#lancamentos-mondelez"
+        ]
+    },
+    "list-context.product-list#lancamentos-mondelez": {
+        "blocks": [
+            "product-summary.shelf"
+        ],
+        "children": [
+            "slider-layout#shelf"
+        ],
+        "props": {
+            "orderBy": "OrderByTopSaleDESC"
+        }
+    },
+    "flex-layout.row#melhores-produtos-mondelez": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "estrelas"
+            ]
+        },
+        "children": [
+            "flex-layout.col#melhores-produtos-mondelez"
+        ]
+    },
+    "flex-layout.col#melhores-produtos-mondelez": {
+        "props": {
+            "blockClass": "destaque-home"
+        },
+        "children": [
+            "rich-text#title-melhores-produtos-mondelez",
+            "flex-layout.row#melhores-produtos-mondelez-1",
+            "flex-layout.row#melhores-produtos-mondelez-2"
+        ]
+    },
+    "rich-text#title-melhores-produtos-mondelez": {
+        "props": {
+            "text": "## MELHORES PRODUTOS",
+            "blockClass": [
+                "title-padrao",
+                "title-estrelas",
+                "title-mandelez"
+            ]
+        }
+    },
+    "flex-layout.row#melhores-produtos-mondelez-1": {
+        "props": {
+            "blockClass": "estrelas-int"
+        },
+        "children": [
+            "image#melhores-produtos-mondelez-1",
+            "image#melhores-produtos-mondelez-2",
+            "image#melhores-produtos-mondelez-3",
+            "image#melhores-produtos-mondelez-4"
+        ]
+    },
+    "image#melhores-produtos-mondelez-1": {
+        "props": {
+            "blockClass": "estrelas",
+            "src": "assets/bmondelez1.png",
+            "alt": "mondelez Destaque",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#melhores-produtos-mondelez-2": {
+        "props": {
+            "blockClass": "estrelas",
+            "src": "assets/bmondelez2.png",
+            "alt": "mondelez Destaque",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#melhores-produtos-mondelez-3": {
+        "props": {
+            "blockClass": [
+                "estrelas",
+                "estrelas-central"
+            ],
+            "src": "assets/bmondelez3.png",
+            "alt": "mondelez Destaque",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#melhores-produtos-mondelez-4": {
+        "props": {
+            "blockClass": "estrelas",
+            "src": "assets/bmondelez4.png",
+            "alt": "mondelez Destaque",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "flex-layout.row#melhores-produtos-mondelez-2": {
+        "props": {
+            "blockClass": "estrelas-int-int"
+        },
+        "children": [
+            "image#melhores-produtos-mondelez-5"
+        ]
+    },
+    "image#melhores-produtos-mondelez-5": {
+        "props": {
+            "blockClass": "estrelas",
+            "src": "assets/bmondelez5.png",
+            "alt": "mondelez Destaque",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "flex-layout.row#ofertas-mondelez": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "ofertas"
+            ]
+        },
+        "children": [
+            "flex-layout.col#ofertas-mondelez"
+        ]
+    },
+    "flex-layout.col#ofertas-mondelez": {
+        "props": {
+            "blockClass": "destaque-home"
+        },
+        "children": [
+            "rich-text#title-ofertas-mondelez",
+            "flex-layout.row#shelf-ofertas-mondelez-1"
+        ]
+    },
+    "rich-text#title-ofertas-mondelez": {
+        "props": {
+            "text": "## CONFIRA NOSSAS OFERTAS",
+            "blockClass": [
+                "title-padrao",
+                "title-ofertas",
+                "title-mandelez"
+            ]
+        }
+    },
+    "flex-layout.row#shelf-ofertas-mondelez-1": {
+        "children": [
+            "list-context.product-list#ofertas-mondelez"
+        ]
+    },
+    "list-context.product-list#ofertas-mondelez": {
+        "blocks": [
+            "product-summary.shelf"
+        ],
+        "children": [
+            "slider-layout#shelf"
+        ],
+        "props": {
+            "orderBy": "OrderByTopSaleDESC"
+        }
+    },
+    "flex-layout.row#mais-vendidos-mondelez": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "ofertas"
+            ]
+        },
+        "children": [
+            "flex-layout.col#mais-vendidos-mondelez"
+        ]
+    },
+    "flex-layout.col#mais-vendidos-mondelez": {
+        "props": {
+            "blockClass": "destaque-home"
+        },
+        "children": [
+            "rich-text#title-mais-vendidos-mondelez",
+            "flex-layout.row#shelf-mais-vendidos-mondelez-1"
+        ]
+    },
+    "rich-text#title-mais-vendidos-mondelez": {
+        "props": {
+            "text": "## OS MAIS VENDIDOS",
+            "blockClass": [
+                "title-padrao",
+                "title-ofertas",
+                "title-mandelez"
+            ]
+        }
+    },
+    "flex-layout.row#shelf-mais-vendidos-mondelez-1": {
+        "children": [
+            "list-context.product-list#mais-vendidos-mondelez"
+        ]
+    },
+    "list-context.product-list#mais-vendidos-mondelez": {
+        "blocks": [
+            "product-summary.shelf"
+        ],
+        "children": [
+            "slider-layout#shelf"
+        ],
+        "props": {
+            "orderBy": "OrderByTopSaleDESC"
+        }
+    }
+}

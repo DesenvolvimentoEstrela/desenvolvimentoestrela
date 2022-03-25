@@ -1,0 +1,630 @@
+{
+    "store.custom#unilever": {
+        "blocks": [
+            "flex-layout.row#banner-principal-unilever",
+            "flex-layout.row#fornecedores-unilever",
+            "flex-layout.row#promocoes-unilever",
+            "flex-layout.row#lancamentos-unilever",
+            "flex-layout.row#melhores-produtos-unilever",
+            "flex-layout.row#ofertas-unilever",
+            "flex-layout.row#mais-vendidos-unilever"
+        ],
+        "parent": {
+            "header": "header#unilever",
+            "footer": "footer#unilever"
+        }
+    },
+    "flex-layout.row#banner-principal-unilever": {
+        "children": [
+            "list-context.image-list#banner-principal-unilever"
+        ],
+        "props": {
+            "horizontalAlign": "center",
+            "preventHorizontalStretch": true,
+            "preventVerticalStretch": true,
+            "fullWidth": true,
+            "blockClass": "banner-principal",
+            "title": "Banner Principal"
+        }
+    },
+    "list-context.image-list#banner-principal-unilever": {
+        "children": [
+            "slider-layout#banner-principal-unilever"
+        ],
+        "props": {
+            "height": "493px",
+            "images": [
+                {
+                    "image": "assets/seda.png",
+                    "mobileImage": "assets/aa.png"
+                },
+                {
+                    "image": "assets/cremogema.png",
+                    "mobileImage": "assets/aa.png"
+                },
+                {
+                    "image": "assets/confort.png",
+                    "mobileImage": "assets/aa.png"
+                }
+            ]
+        }
+    },
+    "slider-layout#banner-principal-unilever": {
+        "props": {
+            "itemsPerPage": {
+                "desktop": 1,
+                "tablet": 1,
+                "phone": 1
+            },
+            "infinite": true,
+            "showPaginationDots": "mobileOnly",
+            "showNavigationArrows": "always",
+            "blockClass": "banner-principal",
+            "autoplay": {
+                "timeout": "4000",
+                "stopOnHover": true
+            }
+        }
+    },
+    "flex-layout.row#fornecedores-unilever": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "fornecedores"
+            ]
+        },
+        "children": [
+            "flex-layout.col#fornecedores-unilever"
+        ]
+    },
+    "flex-layout.col#fornecedores-unilever": {
+        "props": {
+            "blockClass": "fornecedores"
+        },
+        "children": [
+            "rich-text#title-fornecedores-unilever",
+            "slider-layout#fornecedores-unilever"
+        ]
+    },
+    "rich-text#title-fornecedores-unilever": {
+        "props": {
+            "text": "## TRABALHAMOS COM OS MELHORES FORNECEDORES",
+            "blockClass": [
+                "title-padrao",
+                "title-fornecedores",
+                "title-unilever"
+            ]
+        }
+    },
+    "slider-layout#fornecedores-unilever": {
+        "children": [
+            "image#fornecedor-1-unilever",
+            "image#fornecedor-2-unilever",
+            "image#fornecedor-3-unilever",
+            "image#fornecedor-4-unilever",
+            "image#fornecedor-5-unilever",
+            "image#fornecedor-6-unilever",
+            "image#fornecedor-7-unilever",
+            "image#fornecedor-8-unilever",
+            "image#fornecedor-9-unilever",
+            "image#fornecedor-10-unilever",
+            "image#fornecedor-11-unilever",
+            "image#fornecedor-12-unilever"
+        ],
+        "props": {
+            "itemsPerPage": {
+                "desktop": 5,
+                "tablet": 2,
+                "phone": 2
+            },
+            "infinite": true,
+            "fullWidth": true,
+            "showPaginationDots": "never",
+            "showNavigationArrows": "always",
+            "blockClass": "slider-fornecedores"
+        }
+    },
+    "image#fornecedor-1-unilever": {
+        "props": {
+            "src": "assets/marca_CREMOGEMA.png",
+            "alt": "Unilever",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/unilever"
+            }
+        }
+    },
+    "image#fornecedor-2-unilever": {
+        "props": {
+            "src": "assets/marca_COMFORT.png",
+            "alt": "Mondelez",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/mondelez"
+            }
+        }
+    },
+    "image#fornecedor-3-unilever": {
+        "props": {
+            "src": "assets/marca_MAIZENA.png",
+            "alt": "Diageo",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/diageo"
+            }
+        }
+    },
+    "image#fornecedor-4-unilever": {
+        "props": {
+            "src": "assets/marca_seda.png",
+            "alt": "Colgate",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/colgate"
+            }
+        }
+    },
+    "image#fornecedor-5-unilever": {
+        "props": {
+            "src": "assets/marca_OMO.png",
+            "alt": "Mondial",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/mondial"
+            }
+        }
+    },
+    "image#fornecedor-6-unilever": {
+        "props": {
+            "src": "assets/marca_HELLMANS.png",
+            "alt": "Unilever",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/unilever"
+            }
+        }
+    },
+    "image#fornecedor-7-unilever": {
+        "props": {
+            "src": "assets/marca_BRILHANTE.png",
+            "alt": "Mondelez",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/mondelez"
+            }
+        }
+    },
+    "image#fornecedor-8-unilever": {
+        "props": {
+            "src": "assets/marca_REXONA.png",
+            "alt": "Diageo",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/diageo"
+            }
+        }
+    },
+    "image#fornecedor-9-unilever": {
+        "props": {
+            "src": "assets/marca_SURF.png",
+            "alt": "Colgate",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/colgate"
+            }
+        }
+    },
+    "image#fornecedor-10-unilever": {
+        "props": {
+            "src": "assets/marca_FOFO.png",
+            "alt": "Mondial",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/mondial"
+            }
+        }
+    },
+    "image#fornecedor-11-unilever": {
+        "props": {
+            "src": "assets/marca_DOVE.png",
+            "alt": "Unilever",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/unilever"
+            }
+        }
+    },
+    "image#fornecedor-12-unilever": {
+        "props": {
+            "src": "assets/marca_ARISCO.png",
+            "alt": "Mondelez",
+            "blockClass": "image-fornecedores",
+            "link": {
+                "url": "/mondelez"
+            }
+        }
+    },
+    "flex-layout.row#promocoes-unilever": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "vantagens"
+            ]
+        },
+        "children": [
+            "flex-layout.col#promocoes-unilever"
+        ]
+    },
+    "flex-layout.col#promocoes-unilever": {
+        "props": {
+            "blockClass": "destaque-home"
+        },
+        "children": [
+            "rich-text#title-promocoes-unilever",
+            "flex-layout.row#promocoes-unilever-1"
+        ]
+    },
+    "rich-text#title-promocoes-unilever": {
+        "props": {
+            "text": "## PROMOÇÕES DO MÊS",
+            "blockClass": [
+                "title-padrao",
+                "title-vantagens",
+                "title-unilever"
+            ]
+        }
+    },
+    "flex-layout.row#promocoes-unilever-1": {
+        "props": {
+            "blockClass": "vantagens-int"
+        },
+        "children": [
+            "slider-layout#promocoes-unilever"
+        ]
+    },
+    "slider-layout#promocoes-unilever": {
+        "children": [
+            "image#promocoes-unilever-1",
+            "image#promocoes-unilever-2",
+            "image#promocoes-unilever-3",
+            "image#promocoes-unilever-4",
+            "image#promocoes-unilever-5",
+            "image#promocoes-unilever-6",
+            "image#promocoes-unilever-7",
+            "image#promocoes-unilever-8"
+        ],
+        "props": {
+            "itemsPerPage": {
+                "desktop": 4,
+                "tablet": 2,
+                "phone": 2
+            },
+            "infinite": true,
+            "fullWidth": true,
+            "showPaginationDots": "never",
+            "showNavigationArrows": "always",
+            "blockClass": "slider-vantagens"
+        }
+    },
+    "image#promocoes-unilever-1": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/UNILEVER1.png",
+            "alt": "Banner unilever",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-unilever-2": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/UNILEVER2.png",
+            "alt": "Banner unilever",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-unilever-3": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/UNILEVER3.png",
+            "alt": "Banner unilever",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-unilever-4": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/UNILEVER4.png",
+            "alt": "Banner unilever",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-unilever-5": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/UNILEVER1.png",
+            "alt": "Banner unilever",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-unilever-6": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/UNILEVER2.png",
+            "alt": "Banner unilever",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-unilever-7": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/UNILEVER3.png",
+            "alt": "Banner unilever",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#promocoes-unilever-8": {
+        "props": {
+            "blockClass": "vantagens",
+            "src": "assets/UNILEVER4.png",
+            "alt": "Banner unilever",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "flex-layout.row#lancamentos-unilever": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "ofertas"
+            ]
+        },
+        "children": [
+            "flex-layout.col#lancamentos-unilever"
+        ]
+    },
+    "flex-layout.col#lancamentos-unilever": {
+        "props": {
+            "blockClass": "destaque-home"
+        },
+        "children": [
+            "rich-text#title-lancamentos-unilever",
+            "flex-layout.row#shelf-lancamentos-unilever-1"
+        ]
+    },
+    "rich-text#title-lancamentos-unilever": {
+        "props": {
+            "text": "## LANÇAMENTOS",
+            "blockClass": [
+                "title-padrao",
+                "title-ofertas",
+                "title-unilever"
+            ]
+        }
+    },
+    "flex-layout.row#shelf-lancamentos-unilever-1": {
+        "children": [
+            "list-context.product-list#lancamentos-unilever"
+        ]
+    },
+    "list-context.product-list#lancamentos-unilever": {
+        "blocks": [
+            "product-summary.shelf"
+        ],
+        "children": [
+            "slider-layout#shelf"
+        ],
+        "props": {
+            "orderBy": "OrderByTopSaleDESC"
+        }
+    },
+    "flex-layout.row#melhores-produtos-unilever": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "estrelas"
+            ]
+        },
+        "children": [
+            "flex-layout.col#melhores-produtos-unilever"
+        ]
+    },
+    "flex-layout.col#melhores-produtos-unilever": {
+        "props": {
+            "blockClass": "destaque-home"
+        },
+        "children": [
+            "rich-text#title-melhores-produtos-unilever",
+            "flex-layout.row#melhores-produtos-unilever-1",
+            "flex-layout.row#melhores-produtos-unilever-2"
+        ]
+    },
+    "rich-text#title-melhores-produtos-unilever": {
+        "props": {
+            "text": "## MELHORES PRODUTOS",
+            "blockClass": [
+                "title-padrao",
+                "title-estrelas",
+                "title-unilever"
+            ]
+        }
+    },
+    "flex-layout.row#melhores-produtos-unilever-1": {
+        "props": {
+            "blockClass": "estrelas-int"
+        },
+        "children": [
+            "image#melhores-produtos-unilever-1",
+            "image#melhores-produtos-unilever-2",
+            "image#melhores-produtos-unilever-3",
+            "image#melhores-produtos-unilever-4"
+        ]
+    },
+    "image#melhores-produtos-unilever-1": {
+        "props": {
+            "blockClass": "estrelas",
+            "src": "assets/UNILEVEROMO.png",
+            "alt": "unilever Destaque",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#melhores-produtos-unilever-2": {
+        "props": {
+            "blockClass": "estrelas",
+            "src": "assets/UNILEVERREXONA.png",
+            "alt": "unilever Destaque",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#melhores-produtos-unilever-3": {
+        "props": {
+            "blockClass": [
+                "estrelas",
+                "estrelas-central"
+            ],
+            "src": "assets/UNILEVERDOVE.png",
+            "alt": "unilever Destaque",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "image#melhores-produtos-unilever-4": {
+        "props": {
+            "blockClass": "estrelas",
+            "src": "assets/UNILEVERFOFO.png",
+            "alt": "unilever Destaque",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "flex-layout.row#melhores-produtos-unilever-2": {
+        "props": {
+            "blockClass": "estrelas-int-int"
+        },
+        "children": [
+            "image#melhores-produtos-unilever-5"
+        ]
+    },
+    "image#melhores-produtos-unilever-5": {
+        "props": {
+            "blockClass": "estrelas",
+            "src": "assets/UNILEVERMAISENA.png",
+            "alt": "unilever Destaque",
+            "link": {
+                "url": "/"
+            }
+        }
+    },
+    "flex-layout.row#ofertas-unilever": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "ofertas"
+            ]
+        },
+        "children": [
+            "flex-layout.col#ofertas-unilever"
+        ]
+    },
+    "flex-layout.col#ofertas-unilever": {
+        "props": {
+            "blockClass": "destaque-home"
+        },
+        "children": [
+            "rich-text#title-ofertas-unilever",
+            "flex-layout.row#shelf-ofertas-unilever-1"
+        ]
+    },
+    "rich-text#title-ofertas-unilever": {
+        "props": {
+            "text": "## CONFIRA NOSSAS OFERTAS",
+            "blockClass": [
+                "title-padrao",
+                "title-ofertas",
+                "title-unilever"
+            ]
+        }
+    },
+    "flex-layout.row#shelf-ofertas-unilever-1": {
+        "children": [
+            "list-context.product-list#ofertas-unilever"
+        ]
+    },
+    "list-context.product-list#ofertas-unilever": {
+        "blocks": [
+            "product-summary.shelf"
+        ],
+        "children": [
+            "slider-layout#shelf"
+        ],
+        "props": {
+            "orderBy": "OrderByTopSaleDESC"
+        }
+    },
+    "flex-layout.row#mais-vendidos-unilever": {
+        "props": {
+            "blockClass": [
+                "destaque-home",
+                "ofertas"
+            ]
+        },
+        "children": [
+            "flex-layout.col#mais-vendidos-unilever"
+        ]
+    },
+    "flex-layout.col#mais-vendidos-unilever": {
+        "props": {
+            "blockClass": "destaque-home"
+        },
+        "children": [
+            "rich-text#title-mais-vendidos-unilever",
+            "flex-layout.row#shelf-mais-vendidos-unilever-1"
+        ]
+    },
+    "rich-text#title-mais-vendidos-unilever": {
+        "props": {
+            "text": "## OS MAIS VENDIDOS",
+            "blockClass": [
+                "title-padrao",
+                "title-ofertas",
+                "title-unilever"
+            ]
+        }
+    },
+    "flex-layout.row#shelf-mais-vendidos-unilever-1": {
+        "children": [
+            "list-context.product-list#mais-vendidos-unilever"
+        ]
+    },
+    "list-context.product-list#mais-vendidos-unilever": {
+        "blocks": [
+            "product-summary.shelf"
+        ],
+        "children": [
+            "slider-layout#shelf"
+        ],
+        "props": {
+            "orderBy": "OrderByTopSaleDESC"
+        }
+    }
+}

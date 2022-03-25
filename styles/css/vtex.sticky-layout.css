@@ -1,0 +1,20 @@
+.wrapper.wrapper--sticky-header,
+.container--sticky-header{background:#fff;}
+.wrapper--main-header-mobile--stuck{
+    height:fit-content !important;
+}
+
+/* MOBILE */
+@media screen and (max-width: 1024px) {
+    .container--main-header-mobile{
+        width:100vw;
+        padding:0 10px;
+        background:#fff;
+    }
+    .container--main-header-mobile-gune-lp{background: #FE7F00;} 
+    .container--main-header-mobile-flora-lp{background: #00557C;}
+    .container--main-header-mobile-unilever-lp{background: #185A95;} 
+    .container--main-header-mobile-mondelez-lp{background: #6537AF;} 
+    .container--main-header-mobile-pernod-ricard-lp{background: #76A0CD;} 
+
+}

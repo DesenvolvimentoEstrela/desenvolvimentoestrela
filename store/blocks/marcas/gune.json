@@ -1,0 +1,451 @@
+{
+  "store.custom#gune": {
+    "blocks": [
+      "flex-layout.row#banner-principal-gune",
+      "flex-layout.row#promocoes-gune",
+      "flex-layout.row#lancamentos-gune",
+      "flex-layout.row#melhores-produtos-gune",
+      "flex-layout.row#ofertas-gune",
+      "flex-layout.row#mais-vendidos-gune"
+    ],
+    "parent": {
+      "header": "header#gune",
+      "footer": "footer#gune"
+    }
+  },
+  "flex-layout.row#banner-principal-gune": {
+    "children": [
+      "list-context.image-list#banner-principal-gune"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "banner-principal",
+      "title": "Banner Principal"
+    }
+  },
+  "list-context.image-list#banner-principal-gune": {
+    "children": [
+      "slider-layout#banner-principal-gune"
+    ],
+    "props": {
+      "height": "493px",
+      "images": [
+        {
+          "image": "assets/estrela-lp-banner-full-provisorio.png",
+          "mobileImage": "assets/aa.png"
+        },
+        {
+          "image": "assets/estrela-lp-banner-full-provisorio.png",
+          "mobileImage": "assets/aa.png"
+        },
+        {
+          "image": "assets/estrela-lp-banner-full-provisorio.png",
+          "mobileImage": "assets/aa.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#banner-principal-gune": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showPaginationDots": "mobileOnly",
+      "showNavigationArrows": "always",
+      "blockClass": "banner-principal",
+      "autoplay": {
+        "timeout": "4000",
+        "stopOnHover": true
+      }
+    }
+  },
+  "flex-layout.row#promocoes-gune": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "vantagens"
+      ]
+    },
+    "children": [
+      "flex-layout.col#promocoes-gune"
+    ]
+  },
+  "flex-layout.col#promocoes-gune": {
+    "props": {
+      "blockClass": "destaque-home"
+    },
+    "children": [
+      "rich-text#title-promocoes-gune",
+      "flex-layout.row#promocoes-gune-1"
+    ]
+  },
+  "rich-text#title-promocoes-gune": {
+    "props": {
+      "text": "## PROMOÇÕES DO MÊS",
+      "blockClass": [
+        "title-padrao",
+        "title-vantagens",
+        "title-gune"
+      ]
+    }
+  },
+  "flex-layout.row#promocoes-gune-1": {
+    "props": {
+      "blockClass": "vantagens-int"
+    },
+    "children": [
+      "slider-layout#promocoes-gune"
+    ]
+  },
+  "slider-layout#promocoes-gune": {
+    "children": [
+      "image#promocoes-gune-1",
+      "image#promocoes-gune-2",
+      "image#promocoes-gune-3",
+      "image#promocoes-gune-4",
+      "image#promocoes-gune-5",
+      "image#promocoes-gune-6",
+      "image#promocoes-gune-7",
+      "image#promocoes-gune-8"
+    ],
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 2
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "always",
+      "blockClass": "slider-vantagens"
+    }
+  },
+  "image#promocoes-gune-1": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/gune1.png",
+      "alt": "Banner Gune",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-gune-2": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/gune2.png",
+      "alt": "Banner Gune",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-gune-3": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/gune3.png",
+      "alt": "Banner Gune",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-gune-4": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/gune4.png",
+      "alt": "Banner Gune",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-gune-5": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/gune1.png",
+      "alt": "Banner Gune",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-gune-6": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/gune2.png",
+      "alt": "Banner Gune",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-gune-7": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/gune3.png",
+      "alt": "Banner Gune",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-gune-8": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/gune4.png",
+      "alt": "Banner Gune",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "flex-layout.row#lancamentos-gune": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "ofertas"
+      ]
+    },
+    "children": [
+      "flex-layout.col#lancamentos-gune"
+    ]
+  },
+  "flex-layout.col#lancamentos-gune": {
+    "props": {
+      "blockClass": "destaque-home"
+    },
+    "children": [
+      "rich-text#title-lancamentos-gune",
+      "flex-layout.row#shelf-lancamentos-gune-1"
+    ]
+  },
+  "rich-text#title-lancamentos-gune": {
+    "props": {
+      "text": "## LANÇAMENTOS",
+      "blockClass": [
+        "title-padrao",
+        "title-ofertas",
+        "title-gune"
+      ]
+    }
+  },
+  "flex-layout.row#shelf-lancamentos-gune-1": {
+    "children": [
+      "list-context.product-list#lancamentos-gune"
+    ]
+  },
+  "list-context.product-list#lancamentos-gune": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#shelf"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "flex-layout.row#melhores-produtos-gune": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "estrelas"
+      ]
+    },
+    "children": [
+      "flex-layout.col#melhores-produtos-gune"
+    ]
+  },
+  "flex-layout.col#melhores-produtos-gune": {
+    "props": {
+      "blockClass": "destaque-home"
+    },
+    "children": [
+      "rich-text#title-melhores-produtos-gune",
+      "flex-layout.row#melhores-produtos-gune-1",
+      "flex-layout.row#melhores-produtos-gune-2"
+    ]
+  },
+  "rich-text#title-melhores-produtos-gune": {
+    "props": {
+      "text": "## MELHORES PRODUTOS",
+      "blockClass": [
+        "title-padrao",
+        "title-estrelas",
+        "title-gune"
+      ]
+    }
+  },
+  "flex-layout.row#melhores-produtos-gune-1": {
+    "props": {
+      "blockClass": "estrelas-int"
+    },
+    "children": [
+      "image#melhores-produtos-gune-1",
+      "image#melhores-produtos-gune-2",
+      "image#melhores-produtos-gune-3",
+      "image#melhores-produtos-gune-4"
+    ]
+  },
+  "image#melhores-produtos-gune-1": {
+    "props": {
+      "blockClass": "estrelas",
+      "src": "assets/bgune1.png",
+      "alt": "Gune Destaque",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#melhores-produtos-gune-2": {
+    "props": {
+      "blockClass": "estrelas",
+      "src": "assets/bgune2.png",
+      "alt": "Gune Destaque",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#melhores-produtos-gune-3": {
+    "props": {
+      "blockClass": [
+        "estrelas",
+        "estrelas-central"
+      ],
+      "src": "assets/bgune3.png",
+      "alt": "Gune Destaque",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#melhores-produtos-gune-4": {
+    "props": {
+      "blockClass": "estrelas",
+      "src": "assets/bgune4.png",
+      "alt": "Gune Destaque",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "flex-layout.row#melhores-produtos-gune-2": {
+    "props": {
+      "blockClass": "estrelas-int-int"
+    },
+    "children": [
+      "image#melhores-produtos-gune-5"
+    ]
+  },
+  "image#melhores-produtos-gune-5": {
+    "props": {
+      "blockClass": "estrelas",
+      "src": "assets/bgune5.png",
+      "alt": "Gune Destaque",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "flex-layout.row#ofertas-gune": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "ofertas"
+      ]
+    },
+    "children": [
+      "flex-layout.col#ofertas-gune"
+    ]
+  },
+  "flex-layout.col#ofertas-gune": {
+    "props": {
+      "blockClass": "destaque-home"
+    },
+    "children": [
+      "rich-text#title-ofertas-gune",
+      "flex-layout.row#shelf-ofertas-gune-1"
+    ]
+  },
+  "rich-text#title-ofertas-gune": {
+    "props": {
+      "text": "## CONFIRA NOSSAS OFERTAS",
+      "blockClass": [
+        "title-padrao",
+        "title-ofertas",
+        "title-gune"
+      ]
+    }
+  },
+  "flex-layout.row#shelf-ofertas-gune-1": {
+    "children": [
+      "list-context.product-list#ofertas-gune"
+    ]
+  },
+  "list-context.product-list#ofertas-gune": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#shelf"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "flex-layout.row#mais-vendidos-gune": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "ofertas"
+      ]
+    },
+    "children": [
+      "flex-layout.col#mais-vendidos-gune"
+    ]
+  },
+  "flex-layout.col#mais-vendidos-gune": {
+    "props": {
+      "blockClass": "destaque-home"
+    },
+    "children": [
+      "rich-text#title-mais-vendidos-gune",
+      "flex-layout.row#shelf-mais-vendidos-gune-1"
+    ]
+  },
+  "rich-text#title-mais-vendidos-gune": {
+    "props": {
+      "text": "## OS MAIS VENDIDOS",
+      "blockClass": [
+        "title-padrao",
+        "title-ofertas",
+        "title-gune"
+      ]
+    }
+  },
+  "flex-layout.row#shelf-mais-vendidos-gune-1": {
+    "children": [
+      "list-context.product-list#mais-vendidos-gune"
+    ]
+  },
+  "list-context.product-list#mais-vendidos-gune": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#shelf"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  }
+}

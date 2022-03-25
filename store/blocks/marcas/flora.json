@@ -1,0 +1,575 @@
+{
+  "store.custom#flora": {
+    "blocks": [
+      "flex-layout.row#banner-principal-flora",
+      "flex-layout.row#fornecedores-flora",
+      "flex-layout.row#promocoes-flora",
+      "flex-layout.row#lancamentos-flora",
+      "flex-layout.row#melhores-produtos-flora",
+      "flex-layout.row#ofertas-flora",
+      "flex-layout.row#mais-vendidos-flora"
+    ],
+    "parent": {
+      "header": "header#flora",
+      "footer": "footer#flora"
+    }
+  },
+  "flex-layout.row#banner-principal-flora": {
+    "children": [
+      "list-context.image-list#banner-principal-flora"
+    ],
+    "props": {
+      "horizontalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "banner-principal",
+      "title": "Banner Principal"
+    }
+  },
+  "list-context.image-list#banner-principal-flora": {
+    "children": [
+      "slider-layout#banner-principal-flora"
+    ],
+    "props": {
+      "height": "493px",
+      "images": [
+        {
+          "image": "assets/estrela-lp-banner-full-provisorio.png",
+          "mobileImage": "assets/aa.png"
+        },
+        {
+          "image": "assets/estrela-lp-banner-full-provisorio.png",
+          "mobileImage": "assets/aa.png"
+        },
+        {
+          "image": "assets/estrela-lp-banner-full-provisorio.png",
+          "mobileImage": "assets/aa.png"
+        }
+      ]
+    }
+  },
+  "slider-layout#banner-principal-flora": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "showPaginationDots": "mobileOnly",
+      "showNavigationArrows": "always",
+      "blockClass": "banner-principal",
+      "autoplay": {
+        "timeout": "4000",
+        "stopOnHover": true
+      }
+    }
+  },
+  "flex-layout.row#fornecedores-flora": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "fornecedores"
+      ]
+    },
+    "children": [
+      "flex-layout.col#fornecedores-flora"
+    ]
+  },
+  "flex-layout.col#fornecedores-flora": {
+    "props": {
+      "blockClass": "fornecedores"
+    },
+    "children": [
+      "rich-text#title-fornecedores-flora",
+      "slider-layout#fornecedores-flora"
+    ]
+  },
+  "rich-text#title-fornecedores-flora": {
+    "props": {
+      "text": "## TRABALHAMOS COM OS MELHORES FORNECEDORES",
+      "blockClass": [
+        "title-padrao",
+        "title-fornecedores",
+        "title-flora"
+      ]
+    }
+  },
+  "slider-layout#fornecedores-flora": {
+    "children": [
+      "image#fornecedor-1-flora",
+      "image#fornecedor-2-flora",
+      "image#fornecedor-3-flora",
+      "image#fornecedor-4-flora",
+      "image#fornecedor-5-flora",
+      "image#fornecedor-6-flora",
+      "image#fornecedor-7-flora"
+    ],
+    "props": {
+      "itemsPerPage": {
+        "desktop": 5,
+        "tablet": 2,
+        "phone": 2
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "always",
+      "blockClass": "slider-fornecedores"
+    }
+  },
+  "image#fornecedor-1-flora": {
+    "props": {
+      "src": "assets/marcas_ALBANY.png",
+      "alt": "Unilever",
+      "blockClass": "image-fornecedores",
+      "link": {
+        "url": "/unilever"
+      }
+    }
+  },
+  "image#fornecedor-2-flora": {
+    "props": {
+      "src": "assets/marcas_MATINSET.png",
+      "alt": "Mondelez",
+      "blockClass": "image-fornecedores",
+      "link": {
+        "url": "/mondelez"
+      }
+    }
+  },
+  "image#fornecedor-3-flora": {
+    "props": {
+      "src": "assets/marcas_MINUANO.png",
+      "alt": "Diageo",
+      "blockClass": "image-fornecedores",
+      "link": {
+        "url": "/diageo"
+      }
+    }
+  },
+  "image#fornecedor-4-flora": {
+    "props": {
+      "src": "assets/marcas_FRANCIS.png",
+      "alt": "Colgate",
+      "blockClass": "image-fornecedores",
+      "link": {
+        "url": "/colgate"
+      }
+    }
+  },
+  "image#fornecedor-5-flora": {
+    "props": {
+      "src": "assets/marcas_ASSIM.png",
+      "alt": "Mondial",
+      "blockClass": "image-fornecedores",
+      "link": {
+        "url": "/mondial"
+      }
+    }
+  },
+  "image#fornecedor-6-flora": {
+    "props": {
+      "src": "assets/marcas_NEUTROX.png",
+      "alt": "Unilever",
+      "blockClass": "image-fornecedores",
+      "link": {
+        "url": "/unilever"
+      }
+    }
+  },
+  "image#fornecedor-7-flora": {
+    "props": {
+      "src": "assets/marcas_OX.png",
+      "alt": "Mondelez",
+      "blockClass": "image-fornecedores",
+      "link": {
+        "url": "/mondelez"
+      }
+    }
+  },
+  "flex-layout.row#promocoes-flora": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "vantagens"
+      ]
+    },
+    "children": [
+      "flex-layout.col#promocoes-flora"
+    ]
+  },
+  "flex-layout.col#promocoes-flora": {
+    "props": {
+      "blockClass": "destaque-home"
+    },
+    "children": [
+      "rich-text#title-promocoes-flora",
+      "flex-layout.row#promocoes-flora-1"
+    ]
+  },
+  "rich-text#title-promocoes-flora": {
+    "props": {
+      "text": "## PROMOÇÕES DO MÊS",
+      "blockClass": [
+        "title-padrao",
+        "title-vantagens",
+        "title-flora"
+      ]
+    }
+  },
+  "flex-layout.row#promocoes-flora-1": {
+    "props": {
+      "blockClass": "vantagens-int"
+    },
+    "children": [
+      "slider-layout#promocoes-flora"
+    ]
+  },
+  "slider-layout#promocoes-flora": {
+    "children": [
+      "image#promocoes-flora-1",
+      "image#promocoes-flora-2",
+      "image#promocoes-flora-3",
+      "image#promocoes-flora-4",
+      "image#promocoes-flora-5",
+      "image#promocoes-flora-6",
+      "image#promocoes-flora-7",
+      "image#promocoes-flora-8"
+    ],
+    "props": {
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 2
+      },
+      "infinite": true,
+      "fullWidth": true,
+      "showPaginationDots": "never",
+      "showNavigationArrows": "always",
+      "blockClass": "slider-vantagens"
+    }
+  },
+  "image#promocoes-flora-1": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/flora1.png",
+      "alt": "Banner flora",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-flora-2": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/flora2.png",
+      "alt": "Banner flora",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-flora-3": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/flora3.png",
+      "alt": "Banner flora",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-flora-4": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/flora3.png",
+      "alt": "Banner flora",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-flora-5": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/flora4.png",
+      "alt": "Banner flora",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-flora-6": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/flora1.png",
+      "alt": "Banner flora",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-flora-7": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/flora2.png",
+      "alt": "Banner flora",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#promocoes-flora-8": {
+    "props": {
+      "blockClass": "vantagens",
+      "src": "assets/flora3.png",
+      "alt": "Banner flora",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "flex-layout.row#lancamentos-flora": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "ofertas"
+      ]
+    },
+    "children": [
+      "flex-layout.col#lancamentos-flora"
+    ]
+  },
+  "flex-layout.col#lancamentos-flora": {
+    "props": {
+      "blockClass": "destaque-home"
+    },
+    "children": [
+      "rich-text#title-lancamentos-flora",
+      "flex-layout.row#shelf-lancamentos-flora-1"
+    ]
+  },
+  "rich-text#title-lancamentos-flora": {
+    "props": {
+      "text": "## LANÇAMENTOS",
+      "blockClass": [
+        "title-padrao",
+        "title-ofertas",
+        "title-flora"
+      ]
+    }
+  },
+  "flex-layout.row#shelf-lancamentos-flora-1": {
+    "children": [
+      "list-context.product-list#lancamentos-flora"
+    ]
+  },
+  "list-context.product-list#lancamentos-flora": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#shelf"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "flex-layout.row#melhores-produtos-flora": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "estrelas"
+      ]
+    },
+    "children": [
+      "flex-layout.col#melhores-produtos-flora"
+    ]
+  },
+  "flex-layout.col#melhores-produtos-flora": {
+    "props": {
+      "blockClass": "destaque-home"
+    },
+    "children": [
+      "rich-text#title-melhores-produtos-flora",
+      "flex-layout.row#melhores-produtos-flora-1",
+      "flex-layout.row#melhores-produtos-flora-2"
+    ]
+  },
+  "rich-text#title-melhores-produtos-flora": {
+    "props": {
+      "text": "## MELHORES PRODUTOS",
+      "blockClass": [
+        "title-padrao",
+        "title-estrelas",
+        "title-flora"
+      ]
+    }
+  },
+  "flex-layout.row#melhores-produtos-flora-1": {
+    "props": {
+      "blockClass": "estrelas-int"
+    },
+    "children": [
+      "image#melhores-produtos-flora-1",
+      "image#melhores-produtos-flora-2",
+      "image#melhores-produtos-flora-3",
+      "image#melhores-produtos-flora-4"
+    ]
+  },
+  "image#melhores-produtos-flora-1": {
+    "props": {
+      "blockClass": "estrelas",
+      "src": "assets/bflora1.png",
+      "alt": "flora Destaque",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#melhores-produtos-flora-2": {
+    "props": {
+      "blockClass": "estrelas",
+      "src": "assets/bflora2.png",
+      "alt": "flora Destaque",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#melhores-produtos-flora-3": {
+    "props": {
+      "blockClass": [
+        "estrelas",
+        "estrelas-central"
+      ],
+      "src": "assets/bflora3.png",
+      "alt": "flora Destaque",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "image#melhores-produtos-flora-4": {
+    "props": {
+      "blockClass": "estrelas",
+      "src": "assets/bflora4.png",
+      "alt": "flora Destaque",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "flex-layout.row#melhores-produtos-flora-2": {
+    "props": {
+      "blockClass": "estrelas-int-int"
+    },
+    "children": [
+      "image#melhores-produtos-flora-5"
+    ]
+  },
+  "image#melhores-produtos-flora-5": {
+    "props": {
+      "blockClass": "estrelas",
+      "src": "assets/bflora5.png",
+      "alt": "flora Destaque",
+      "link": {
+        "url": "/"
+      }
+    }
+  },
+  "flex-layout.row#ofertas-flora": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "ofertas"
+      ]
+    },
+    "children": [
+      "flex-layout.col#ofertas-flora"
+    ]
+  },
+  "flex-layout.col#ofertas-flora": {
+    "props": {
+      "blockClass": "destaque-home"
+    },
+    "children": [
+      "rich-text#title-ofertas-flora",
+      "flex-layout.row#shelf-ofertas-flora-1"
+    ]
+  },
+  "rich-text#title-ofertas-flora": {
+    "props": {
+      "text": "## CONFIRA NOSSAS OFERTAS",
+      "blockClass": [
+        "title-padrao",
+        "title-ofertas",
+        "title-flora"
+      ]
+    }
+  },
+  "flex-layout.row#shelf-ofertas-flora-1": {
+    "children": [
+      "list-context.product-list#ofertas-flora"
+    ]
+  },
+  "list-context.product-list#ofertas-flora": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#shelf"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  },
+  "flex-layout.row#mais-vendidos-flora": {
+    "props": {
+      "blockClass": [
+        "destaque-home",
+        "ofertas"
+      ]
+    },
+    "children": [
+      "flex-layout.col#mais-vendidos-flora"
+    ]
+  },
+  "flex-layout.col#mais-vendidos-flora": {
+    "props": {
+      "blockClass": "destaque-home"
+    },
+    "children": [
+      "rich-text#title-mais-vendidos-flora",
+      "flex-layout.row#shelf-mais-vendidos-flora-1"
+    ]
+  },
+  "rich-text#title-mais-vendidos-flora": {
+    "props": {
+      "text": "## OS MAIS VENDIDOS",
+      "blockClass": [
+        "title-padrao",
+        "title-ofertas",
+        "title-flora"
+      ]
+    }
+  },
+  "flex-layout.row#shelf-mais-vendidos-flora-1": {
+    "children": [
+      "list-context.product-list#mais-vendidos-flora"
+    ]
+  },
+  "list-context.product-list#mais-vendidos-flora": {
+    "blocks": [
+      "product-summary.shelf"
+    ],
+    "children": [
+      "slider-layout#shelf"
+    ],
+    "props": {
+      "orderBy": "OrderByTopSaleDESC"
+    }
+  }
+}
